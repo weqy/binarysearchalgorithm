@@ -62,18 +62,6 @@ def typeInteger():
 # print(type((entered_number)))
 # print(Entry)
 
-def binary_search(arr, low, high, x):
-    if high >= low:
-        mid = (high + low) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] > x:
-            return binary_search(arr, low, mid - 1, x)
-        else:
-            return binary_search(arr, mid + 1, high, x)
-
-    else:
-        return -1
 '''
 def randomnumbergenerator():
     ran = int(random.randrange())
@@ -91,9 +79,9 @@ def RNG():
 
 
 if result != -1:
-    res = ("Element is present at index", str(result))
-else:
-    res = "Element is not present in array"
+#    res = ("Element is present at index", str(result))
+# else:
+#    res = "Element is not present in array"
 
 button1 = tk.Button(text='Enter', command=typeInteger)
 canvas1.create_window(200, 180, window=button1)
