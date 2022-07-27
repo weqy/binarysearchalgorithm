@@ -78,7 +78,7 @@ def RNG():
 
 
 
-if result != -1:
+# if result != -1:
 #    res = ("Element is present at index", str(result))
 # else:
 #    res = "Element is not present in array"
