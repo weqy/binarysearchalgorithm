@@ -76,17 +76,33 @@ def RNG():
         #randomNumLabel = tk.Label(algorithm, text= RNG())
         # canvas1.create_window(200, 250, window=randomNumLabel)
 
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = (high + low) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+        else:
+            return binary_search(arr, mid + 1, high, x)
+
+    else:
+        return -1
 
 
-# if result != -1:
-#    res = ("Element is present at index", str(result))
-# else:
-#    res = "Element is not present in array"
+arr = [2, 3, 4, 10, 40]
+x = 10
+result = binary_search(arr, 0, len(arr) - 1, x)
+
+if result != -1:
+    res = ("Element is present at index", str(result))
+else:
+    res = "Element is not present in array"
 
 button1 = tk.Button(text='Enter', command=typeInteger)
 canvas1.create_window(200, 180, window=button1)
 
-#result1 = tk.Label(algorithm, text=res, font=('helvetica', 10))
-#canvas1.create_window(200, 80, window=result1)
+result1 = tk.Label(algorithm, text=res, font=('helvetica', 10))
+canvas1.create_window(200, 80, window=result1)
 
 algorithm.mainloop()
