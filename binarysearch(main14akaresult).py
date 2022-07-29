@@ -1,9 +1,9 @@
 # Binary Search Algorithm
-# Version 1.3 7/28/22 12:46PM
+# Version 1.4 7/29/22 9:27AM
 import tkinter as tk
 import random
 from tkinter import *
-import playsound
+import playsound # must run: pip install playsound==1.2.2 . latest versions WILL NOT WORK
 
 algorithm = tk.Tk()
 
